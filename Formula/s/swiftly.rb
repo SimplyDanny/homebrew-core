@@ -46,8 +46,8 @@ class Swiftly < Formula
       ]
     end
     system "swift", "build", *args
-
     bin.install ".build/release/swiftly"
+    generate_completions_from_executable(bin/"swiftly", "--generate-completion-script")
   end
 
   test do
